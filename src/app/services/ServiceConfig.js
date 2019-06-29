@@ -3,7 +3,7 @@
 
   var ServiceConfig = function ServiceConfig() {
     return {
-      serverUrl: 'http://am-database/'
+      serverUrl: 'http://iminister.site/samodoctor/'
     }
   };
 
