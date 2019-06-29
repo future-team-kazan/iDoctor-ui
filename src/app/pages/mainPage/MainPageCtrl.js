@@ -5,7 +5,12 @@
     .controller('MainPageCtrl', MainPageCtrl);
 
   /** @ngInject */
-  function MainPageCtrl($scope, baConfig, $element, layoutPaths) {
+  function MainPageCtrl($scope, NotificationService) {
+    NotificationService.getNotifications(function(dataResponse) {
+      $scope.notifictions = dataResponse;
+      console.log($scope.dataFromDb);
+    });
+
 
     $scope.notifictions = [
       {
