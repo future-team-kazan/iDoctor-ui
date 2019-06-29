@@ -1,0 +1,22 @@
+<div ba-panel ba-panel-title="Указы" ba-panel-class="with-scroll">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <td class="hidden"></td>
+            <td class="align-left">Наименование</td>
+            <td class="align-left">Ответственное лицо</td>
+            <td class="align-right">Дата исполнения</td>
+            <td class="align-right">Исполнен на %</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in edictList">
+            <td class="hidden"></td>
+            <td class="align-left">{{item.name}}</td>
+            <td class="align-left">{{item.person}}</td>
+            <td class="align-right">{{item.executionDate}}</td>
+            <td class="align-right">{{item.percent}}%</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

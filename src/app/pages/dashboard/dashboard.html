@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-lg-6 col-md-12">
+    <div ba-panel ba-panel-title="Доходы подведомственных учреждений">
+      <div id="incomeChart" class="iminister-chart" ng-controller="IncomeChartCtrl"></div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-12">
+    <div ba-panel ba-panel-title="Расходы подведомственных учреждений">
+      <div id="expenseChart" class="iminister-chart" ng-controller="ExpenseChartCtrl"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-12">
+    <div ba-panel ba-panel-title="Реализуемые проекты" >
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="hidden"></th>
+          <th class="align-left">Наименование</th>
+          <th class="align-right">Даты реализации</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in projects">
+          <td class="hidden"></td>
+          <td class="align-left">{{item.name}}</td>
+          <td class="align-right">{{item.timeFrame}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-12">
+      <div ng-include="'app/pages/edicts/edicts.html'"></div>
+  </div>
+</div>
+
+
+
