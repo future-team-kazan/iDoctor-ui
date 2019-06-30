@@ -15,7 +15,7 @@
     };
 
     this.addCourse = function addCourse(course, callbackFunc) {
-      $http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+      //$http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
       // добавим курс лечения
       console.log('ЗАРОС: ' + ServiceConfig.serverUrl
         + 'inserttreatment.php?uid=3&name=' + course.title + '&description=' + course.description);

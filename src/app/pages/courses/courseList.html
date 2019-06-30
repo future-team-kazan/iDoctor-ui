@@ -1,6 +1,21 @@
-<div class="panel-blur">
-    Список назначений
+<div ba-panel>
+    <div class="feed-messages-container" track-width="smallContainerWidth" min-width="360">
+        <div class="feed-message" ng-repeat="message in courses" ng-click="expandMessage(message)">
+            <div class="message-icon">
+                <img class="photo-icon" ng-src="{{::( message.type | profilePicture )}}">
+            </div>
+            <div class="text-block text-message">
+                <div class="message-header">
+                    <span class="author">{{ ::message.title }}</span>
+                </div>
+                <div class="message-content line-clamp" >
+                    <span>{{message.description}} </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <plus-button></plus-button>
 
 

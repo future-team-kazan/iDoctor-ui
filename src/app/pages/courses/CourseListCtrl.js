@@ -7,7 +7,16 @@
   /** @ngInject */
   function CourseListCtrl($scope, baConfig, $element, layoutPaths) {
     $scope.courses = [
-
+      {
+        title: 'Ангина',
+        description: 'Воспаление горла',
+        type: 'angina'
+      },
+      {
+        title: 'Кариес',
+        description: 'Повреждение зубов',
+        type: 'caries'
+      }
     ];
   }
 
