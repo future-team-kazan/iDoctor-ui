@@ -16,57 +16,57 @@
       {
         "id": 10,
         "type": "drug",
-        "title": "Принять лекарство",
-        "description": "Принять B6",
+        "title": "Citromon",
+        "description": "Take your medicine after eating",
         "datetime": Date.parse("2019-05-30 08:00:00")
       },
       {
         "id": 11,
         "type": "injection",
-        "title": "Принять лекарство",
-        "description": "Инъекция препарата",
+        "title": "Insulin",
+        "description": "Do injection",
         "datetime": Date.parse("2019-05-30 09:00:00")
       },
       {
         "id": 12,
         "type": "inspection",
-        "title": "Принять лекарство",
-        "description": "Принять B6",
+        "title": "Dentist",
+        "description": "Visit a dentist",
         "datetime": Date.parse("2019-05-30 10:00:00")
       },
       {
         "id": 13,
         "type": "lfp",
-        "title": "Принять лекарство",
-        "description": "Принять B6",
+        "title": "Physical therapy",
+        "description": "Run 1 kilometer",
         "datetime": Date.parse("2019-05-30 11:00:00")
       },
       {
         "id": 14,
         "type": "analysis",
-        "title": "Принять лекарство",
-        "description": "Принять B6",
+        "title": "Do measurements",
+        "description": "You can record measurements to stay in control of your health",
         "datetime": Date.parse("2019-05-30 12:00:00")
       },
       {
         "id": 15,
         "type": "pressure",
-        "title": "Принять лекарство",
-        "description": "Принять B6",
+        "title": "Pressure measuremen",
+        "description": "You can add remember to do measurement of pressure",
         "datetime": Date.parse("2019-05-30 13:00:00")
       },
       {
         "id": 16,
         "type": "temperature",
-        "title": "Принять лекарство",
-        "description": "Принять B6",
+        "title": "Temperature measurement",
+        "description": "You can add remember to measure temperature.",
         "datetime": Date.parse("2019-05-30 14:00:00")
       },
       {
         "id": 17,
         "type": "procedure",
-        "title": "Принять лекарство",
-        "description": "Принять B6",
+        "title": "Procedures",
+        "description": "You can choose the frequency, times a day and hours for your procedures",
         "datetime": Date.parse("2019-05-30 15:00:00")
       }
     ];
