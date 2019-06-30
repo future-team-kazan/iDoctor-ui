@@ -19,6 +19,10 @@
       // добавим курс лечения
       console.log('ЗАРОС: ' + ServiceConfig.serverUrl
         + 'inserttreatment.php?uid=3&name=' + course.title + '&description=' + course.description);
+
+      var activityCount = course.activities.length;
+      var currentCount = 0;
+
       $http.get(ServiceConfig.serverUrl
         + 'inserttreatment.php?uid=3&name=' + course.title + '&description=' + course.description)
         .then(function successCallback(response) {
@@ -34,13 +38,17 @@
               + activity.period + '&illness=2305')
               .then(function successCallback(response) {
                 console.log('Activity added: '+ response.data.aid);
+                currentCount++;
+                if (currentCount == activityCount) {
+
+                  console.log("All activities added!");
+                  callbackFunc();
+                }
               }, function errorCallback(response) {
                 console.log(response);
                 console.log(response.status)
               });
           });
-//insertactivity.php?tid=2320&name=Poloskanie%20rta&doza=1&cup&begin=2019-06-30 21:00:00&end=2019-07-06 21:00:00&period=24&illness=2305
-          //return callbackFunc(response.data);
         }, function errorCallback(response) {
           console.log(response);
           console.log(response.status)
