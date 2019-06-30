@@ -11,3 +11,6 @@
 
     gulp serve
 
+Ссылка на back-end репозиторий
+
+https://github.com/zhenek73/samodoctorbitrix/
