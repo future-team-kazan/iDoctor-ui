@@ -1,0 +1,112 @@
+<div class="panel-group">
+    <div class="panel panel-default bootstrap-panel">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="courseTitle">Title</label>
+                        <input type="text" class="form-control" id="courseTitle" placeholder="Course title"
+                               ng-model="newCourse.title">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="courseDescription">Description</label>
+                        <textarea placeholder="Course description" class="form-control" id="courseDescription"
+                                  ng-model="newCourse.description">
+
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    Назначения      -->
+<!--    <button class="btn btn-primary" ng-click="addActivityPanel()">Add Activity</button>-->
+
+
+    <div class="panel panel-default bootstrap-panel" ng-repeat="activity in newCourse.activities">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="courseTitle">Title</label>
+                        <input type="text" class="form-control" placeholder="Course title"
+                               value="{{activity.title}}">
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                    <div class="form-group datepicker" ng-controller="datepickerpopupCtrl">
+                        <label for="courseTitle">Start date</label>
+                        <p class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup="{{format}}"
+                                   datepicker-options="options" ng-model="activity.startDate" is-open="opened"
+                                   ng-required="false" close-text="Close" alt-input-formats="altInputFormats"
+                                   show-button-bar="false" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open()">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                    <div class="form-group datepicker" ng-controller="datepickerpopupCtrl">
+                        <label for="courseTitle">End date</label>
+                        <p class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup="{{format}}"
+                                   datepicker-options="options" ng-model="activity.endDate" is-open="opened"
+                                   ng-required="false" close-text="Close" alt-input-formats="altInputFormats"
+                                   show-button-bar="false" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open()">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="courseTitle">Period</label>
+                        <input type="text" class="form-control" placeholder="Period in hours"
+                               ng-model=activity.period ng-pattern="/^\d+$/">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="courseDescription">Description</label>
+                        <textarea placeholder="Course description" class="form-control" ng-model="activity.description">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="row btns-row">
+        <ul class="btn-list clearfix">
+            <li>
+                <button type="button" class="btn btn-primary" ng-click="addActivityPanel()">
+                    Add Activity
+                </button>
+            </li>
+
+            <li>
+                <button type="button" class="btn btn-primary" ng-click="saveCourse()">
+                    Save Activity
+                </button>
+            </li>
+        </ul>
+    </div>
+
+</div>

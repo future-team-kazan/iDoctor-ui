@@ -8,6 +8,7 @@
   angular.module('BlurAdmin.pages', [
     'ui.router',
     'BlurAdmin.pages.mainPage',
+    'BlurAdmin.pages.courses',
 
     // 'BlurAdmin.pages.ui',
     // 'BlurAdmin.pages.components',

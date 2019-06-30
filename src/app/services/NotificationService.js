@@ -4,7 +4,7 @@
   var NotificationService = function NotificationService($http, ServiceConfig) {
 
     this.getNotifications = function getNotifications(callbackFunc) {
-      $http.get(ServiceConfig.serverUrl + 'course.php') //TODO исправить адрес
+      $http.get(ServiceConfig.serverUrl + 'course.php?uid=3') //TODO исправить адрес
         .then(function successCallback(response) {
           console.log(response);
           return callbackFunc(response.data);

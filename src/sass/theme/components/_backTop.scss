@@ -20,3 +20,25 @@ $height: 52px;
     opacity: 0.8;
   }
 }
+
+.plus-button {
+  width: $height;
+  height: $height;
+  cursor: pointer;
+  z-index: 9999;
+  right: 40px;
+  bottom: 40px;
+  position: fixed;
+  display: inline;
+  text-decoration: none;
+  font-size: 45px;
+  text-align: center;
+  opacity: 1;
+  color: $label-text;
+  background-color: $danger;
+  border-radius: 50%;
+  line-height: 46px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
