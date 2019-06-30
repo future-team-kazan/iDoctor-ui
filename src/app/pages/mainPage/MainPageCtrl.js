@@ -5,7 +5,7 @@
     .controller('MainPageCtrl', MainPageCtrl);
 
   /** @ngInject */
-  function MainPageCtrl($scope, NotificationService) {
+  function MainPageCtrl($scope, $uibModal, NotificationService) {
     NotificationService.getNotifications(function(dataResponse) {
       $scope.notifictions = dataResponse;
       console.log($scope.dataFromDb);
@@ -70,6 +70,35 @@
         "datetime": Date.parse("2019-05-30 15:00:00")
       }
     ];
+
+    $scope.open = function (page, size) {
+      $scope.noted = false;
+      $scope.motivation = false;
+      $scope.demotivation = false;
+      $uibModal.open({
+        animation: true,
+        templateUrl: page,
+        size: size,
+        scope: $scope,
+        resolve: {
+          items: function () {
+            return $scope.items;
+          }
+        }
+      });
+    };
+
+    $scope.openMotivation = function openMotivation() {
+      console.log("motiv");
+      $scope.motivation = true;
+      $scope.demotivation = false;
+    };
+
+    $scope.openDemotivation = function openDemtivation() {
+      console.log("demotiv");
+      $scope.motivation = false;
+      $scope.demotivation = true;
+    };
   }
 
 })();

@@ -1,6 +1,6 @@
 <div ba-panel>
     <div class="feed-messages-container" track-width="smallContainerWidth" min-width="360">
-        <div class="feed-message" ng-repeat="message in notifictions" ng-click="expandMessage(message)">
+        <div class="feed-message" ng-repeat="message in notifictions" ng-click="open('app/pages/mainPage/smallModal.html', 'sm')">
             <div class="message-icon">
                 <img class="photo-icon" ng-src="{{::( message.type | profilePicture )}}">
             </div>

@@ -9,6 +9,8 @@
     'ui.router',
     'BlurAdmin.pages.mainPage',
     'BlurAdmin.pages.courses',
+    'BlurAdmin.pages.doctors',
+    'BlurAdmin.pages.clinics',
 
     // 'BlurAdmin.pages.ui',
     // 'BlurAdmin.pages.components',

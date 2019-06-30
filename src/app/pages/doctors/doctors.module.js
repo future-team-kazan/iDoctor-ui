@@ -5,19 +5,19 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.mainPage', ['ServicesModule'])
+  angular.module('BlurAdmin.pages.doctors', ['ServicesModule'])
       .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-        .state('main', {
-          url: '/main',
-          templateUrl: 'app/pages/mainPage/mainPage.html',
-          title: 'Main',
-          controller: 'MainPageCtrl',
+        .state('doctors', {
+          url: '/doctors',
+          template: '<div></div>',
+          //templateUrl: 'app/pages/mainPage/mainPage.html',
+          title: 'Doctors',
           sidebarMeta: {
-            icon: 'ion-android-home',
+            icon: 'ion-heart',
             order: 0,
           },
         });

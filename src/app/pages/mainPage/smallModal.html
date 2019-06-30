@@ -1,0 +1,22 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="$close()" aria-label="Close">
+      <em class="ion-ios-close-empty sn-link-close"></em>
+    </button>
+    <h4 ng-if="!(motivation || demotivation)" class="modal-title">Did you?</h4>
+    <h4 ng-if="motivation" class="modal-title">You are awesome!</h4>
+    <h4 ng-if="demotivation" class="modal-title">Nice smile?</h4>
+  </div>
+  <div class="modal-body">
+    <img ng-if="motivation" class="img-wrapper" ng-src="{{::( 'theme/hteeth.jpg' | appImage )}}">
+    <img ng-if="demotivation" class="img-wrapper" ng-src="{{::( 'theme/bteeth.jpg' | appImage )}}">
+  </div>
+  <div ng-if="!(motivation || demotivation)" class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="openMotivation()">Yes!</button>
+    <button type="button" class="btn btn-danger" ng-click="openDemotivation()">No :(</button>
+  </div>
+  <div ng-if="motivation || demotivation" class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="$dismiss()">Ok</button>
+  </div>
+</div>
+

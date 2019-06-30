@@ -17,7 +17,7 @@
         title: 'Courses',
         controller: 'CourseListCtrl',
         sidebarMeta: {
-          icon: 'ion-android-home',
+          icon: 'ion-clipboard',
           order: 0,
         },
       })
